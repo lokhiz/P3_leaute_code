@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* 768px and less (mobile) */
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bi-geo-alt-fill {
+        color: #353535;
+    }
+
+    .header-location {
+        display: flex;
+        order: 1;
+        background-color: #EAEAEA;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+        gap: 20px;
+        box-shadow: -1px -2px 8px -5px rgba(0,0,0,0.7);
+        -webkit-box-shadow: -1px -2px 8px -5px rgba(0,0,0,0.7);
+        -moz-box-shadow: -1px -2px 8px -5px rgba(0,0,0,0.7);
+    }
+
+    input[placeholder="Paris, Belleville"] {
+        color: #353535;
+        border: none;
+        background-color: #EAEAEA;
+        font-weight: 600;
+        width: 90px;
+    }
+
+    input::placeholder {
+        color: #353535;
+    }
+
+    .logo-header {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .explore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F6F6F6;
+        padding: 40px;
+        gap: 10px;
+    }
+
+    .explore-title {
+        text-align: center;
+    }
+
+    #first-explore-title {
+        font-weight: 700;
+    }
+
+    #second-explore-title {
+        font-weight: 100;
+    }
+
+    .button-explore {
+        text-decoration: none;
+        height: 40px;
+        width: 180px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: none;
+        background: rgb(230,113,218);
+        background: linear-gradient(87deg, rgba(230,113,218,1) 0%, rgba(162,91,220,1) 100%);
+        color: white;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .top-card-section {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 20px;
+        gap: 20px;
+    }
+
+    .top-card {
+        display: flex;
+        gap: 30px;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+        height: 70px;
+        align-items: center;
+        position: relative;
+    }
+
+    .top-card:hover {
+        background-color: #F5EDFF;
+    }
+
+    .card-number {
+        position: absolute;
+        left: -8px;
+        background-color: #9356DC;
+        padding: 2px 7px;
+        border-radius: 100%;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .bot-card-title {
+        font-size: 24px;
+        font-weight: 900;
+        padding: 20px;
+    }
+
+    .img-card {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .cards {
+        background-color: #F6F6F6;
+        padding: 1.25rem;
+        border-radius: 20px;
+        max-height: 20%;
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    .card-icon {
+        position: absolute;
+        left: 30px;
+        color: #7E7E7E;
+        font-size: larger;
+    }
+
+    .top-card:hover .card-icon{
+        color: #9356DC;
+    }
+
+    .top-card-text {
+        position: absolute;
+        left: 70px;
+        font-weight: 900;
+        font-size: 15px;
+    }
+
+    .restaurants {
+        padding-top: 40px;
+        background-color: #F6F6F6;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+    h4 {
+        font-weight: 900;
+    }
+
+    .card-text-full {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bi-heart-fill {
+        order: 1;
+        padding: 0 20px;
+        fill: transparent;
+        stroke: 10;
+        stroke: black;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
+    .bi-heart-fill:hover {
+        animation: animate-heart .25s linear forwards;
+    }
+
+    @keyframes animate-heart {
+        0% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+        }
+        100% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+            fill: #9356DC;
+        }
+    }
+
+    .bot-card {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
+        overflow: hidden;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .bot-card > img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        max-height: 200px;
+        object-position: center;
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        padding: 17px 10px;
+        gap: 5px;
+    }
+
+    .top-right-text {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #058A69;
+        background-color: #99E2D0;
+        border-radius: 3px;
+        padding: 7px 12px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .cutlery-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .handshake-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        padding: 20px 20px;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .text-and-icon-footer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo-footer {
+        width: 120px;
+        padding: 10px 0;
+    }
+
+    .icon-footer {
+        width: 17px;
+    }
+}
