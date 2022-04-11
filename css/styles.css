@@ -272,7 +272,9 @@
     }
 
     .contact {
-        
+        position: absolute;
+        transform: translate(0, 460%);
+        opacity: 0;
     }
 
     #mail-adress {
