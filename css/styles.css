@@ -271,17 +271,6 @@
         gap: 10px;
     }
 
-    .contact {
-        position: absolute;
-        transform: translate(0, 460%);
-        opacity: 0;
-    }
-
-    #mail-adress {
-        stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-
     .text-and-icon-footer {
         display: flex;
         gap: 10px;
