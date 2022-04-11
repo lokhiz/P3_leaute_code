@@ -271,6 +271,15 @@
         gap: 10px;
     }
 
+    .contact {
+        
+    }
+
+    #mail-adress {
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
     .text-and-icon-footer {
         display: flex;
         gap: 10px;
