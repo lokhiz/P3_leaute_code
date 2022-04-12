@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 768px and less (mobile) */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #F6F6F6;
+    }
+
+    header {
+        display: flex;
+        width: 68%;
+        padding: 10px 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-header {
+        width: 150px;
+    }
+
+    .bi-arrow-left-short {
+        padding: 0 10px;
+        font-size: 30px;
+        color: #353535;
+    }
+
+    .main-img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    main {
+        background-color: #F6F6F6;
+        position: relative;
+        bottom: 50px;
+        padding-bottom: 80px;
+        border-top-left-radius: 45px 40px;
+        border-top-right-radius: 45px 40px;
+    }
+
+    .single-title {
+        font-family: 'Shrikhand';
+        font-size: 30px;
+    }
+
+    .restaurant-title {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .title-article {
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 3.5px solid #99E2D0;
+        width: 40px;
+        padding-top: 25px;
+    }
+
+    .card-text-full {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5px 0;
+        background: white;
+        border-radius: 15px;
+        height: 60px;
+        -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+        -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+        box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    h5 {
+        font-weight: 100;
+        text-overflow: ellipsis;
+    }
+
+    .price {
+        display: flex;
+        align-items: flex-end;
+        padding: 10px 20px;
+        color: #2C2C2C;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .checkbox {
+        display: none;
+        position: absolute;
+        display: flex;
+        font-size: 22px;
+        color: white;
+        background-color: #99E2D0;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(360px);
+        height: 100%;
+        min-height: 60px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        flex-wrap: wrap;
+        max-width: 0px;
+        width: 0;
+        margin-right: 0px;
+        margin-left: 90%;
+    }
+
+    .card-text-full:hover .checkbox {
+        background-color: #8FDECA;
+    }
+
+    .card-text-full:hover .checkbox {
+        overflow: visible;
+        -webkit-animation: checkbox 0.6s ease-in-out both;
+        animation: checkbox 0.6s ease-in-out both;
+    }
+
+    @-webkit-keyframes checkbox {
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+                  width: 0%;
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+                  width: 20%;
+        }
+      }
+      @keyframes checkbox {
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+
+    .bi-heart-fill {
+        order: 1;
+        fill: transparent;
+        stroke: 10;
+        stroke: black;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
+    .bi-heart-fill:hover {
+        animation: animate-heart .25s linear forwards;
+    }
+
+    @keyframes animate-heart {
+        0% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+        }
+        100% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+            fill: #9356DC;
+        }
+    }
+
+    .button {
+        position: absolute;
+        bottom: -5px;
+        left: 30%;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);        
+        background: linear-gradient(to right, #E885E0, #B174E1);
+        color: white;
+    }
+
+    .cutlery-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .handshake-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        padding: 20px 20px;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .text-and-icon-footer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo-footer {
+        width: 120px;
+        padding: 10px 0;
+    }
+
+    .icon-footer {
+        width: 17px;
+    }
+}
