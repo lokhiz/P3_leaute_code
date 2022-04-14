@@ -132,6 +132,9 @@
         height: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        object-fit: cover;
+        max-height: 230px;
+        min-height: 230px;
     }
 
     .cards {
@@ -173,10 +176,12 @@
     h6 {
         font-size: 16px;
         font-weight: 100;
+        color: black;
     }
 
     h4 {
         font-weight: 900;
+        color: black;
     }
 
     .card-text-full {
@@ -230,6 +235,7 @@
     .card-text {
         display: flex;
         flex-direction: column;
+        text-decoration: none;
         padding: 17px 10px;
         gap: 5px;
     }
@@ -269,6 +275,15 @@
         color: white;
         font-size: 16px;
         gap: 10px;
+        cursor: pointer;
+        width: min-content;
+        white-space: nowrap;
+    }
+
+    .contact {
+        color: white;
+        text-decoration: none;
+        width: min-content;
     }
 
     .text-and-icon-footer {
@@ -283,5 +298,13 @@
 
     .icon-footer {
         width: 17px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        cursor: pointer;
     }
 }

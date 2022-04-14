@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* 768px and less (mobile) */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #F6F6F6;
+    }
+
+    header {
+        display: flex;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    .box-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 40px;
+    }
+
+    .logo-header {
+        width: 150px;
+    }
+
+    .bi-arrow-left-short {
+        padding-left: 10px;
+        font-size: 30px;
+        color: #353535;
+    }
+
+    .main-img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 300px;
+    }
+
+    main {
+        background-color: #F6F6F6;
+        position: relative;
+        bottom: 50px;
+        border-top-left-radius: 45px 40px;
+        border-top-right-radius: 45px 40px;
+    }
+
+    .single-title {
+        font-family: 'Shrikhand';
+        font-size: 30px;
+    }
+
+    .restaurant-title {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        padding-top: 50px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .title-article {
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 3.5px solid #99E2D0;
+        width: 40px;
+        padding-top: 25px;
+    }
+
+    .all-elements {
+        display: flex;
+        background: white;
+        border-radius: 15px;
+        height: 60px;
+        margin: 5px 0;
+        -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+        -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+        box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+
+    }
+
+    .card-text-full {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        width: 100%;    
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    .checkbox {
+        width: 0;
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+
+    .all-elements:hover .checkbox {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translate(8%);
+        width: 14%;
+        animation: checkbox .4s ease-in-out both;
+    }
+
+    @keyframes checkbox {
+        0% {
+            transform: translate(0%);
+            width: 0%;
+        }
+
+        25% {
+            transform: translate(2%);
+            width: 4%;
+        }
+
+        50% {
+            transform: translate(4%);
+            width: 8%;
+        }
+
+        75% {
+            transform: translate(6%);
+            width: 12%;
+        }
+
+        100% {
+            transform: translate(8%);
+            width: 14%;
+        }
+    }
+
+    .all-elements:hover .bi-check-circle-fill {
+        -webkit-animation: bi-check-circle-fill 0.4s ease-in-out both;
+                animation: bi-check-circle-fill 0.4s ease-in-out both;
+    }
+
+    @-webkit-keyframes bi-check-circle-fill {
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+      @keyframes bi-check-circle-fill {
+        0% {
+          -webkit-transform: rotate(0);
+                  transform: rotate(0);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg);
+        }
+      }
+
+    .bi-check-circle-fill {
+        color: white;
+        overflow: hidden;
+    }
+
+    h5 {
+        font-weight: 100;
+        text-overflow: ellipsis;
+    }
+
+    .price {
+        color: #2C2C2C;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        align-items: flex-end;
+        padding: 5px 10px;
+    }
+
+    .bi-heart-fill {
+        order: 1;
+        fill: transparent;
+        stroke: 10;
+        stroke: black;
+        stroke-dasharray: 0;
+        stroke-dashoffset: 0;
+    }
+
+    .bi-heart-fill:hover {
+        animation: animate-heart .25s linear forwards;
+    }
+
+    @keyframes animate-heart {
+        0% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+        }
+        100% {
+            stroke: #9356DC;
+            stroke-dashoffset: 49;
+            fill: #9356DC;
+        }
+    }
+
+    .button-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+
+    .button {
+        align-items: center;
+        justify-content: center;
+        padding: 15px 40px;
+        border-radius: 20px;
+        border: none;
+        -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);        
+        background: linear-gradient(to right, #E885E0, #B174E1);
+        color: white;
+    }
+
+    .cutlery-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .handshake-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        padding: 20px 20px;
+    }
+
+    .footer-text {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        width: min-content;
+    }
+
+    .text-and-icon-footer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo-footer {
+        display: flex;
+        justify-content: flex-start;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .icon-footer {
+        width: 17px;
+    }
+}
