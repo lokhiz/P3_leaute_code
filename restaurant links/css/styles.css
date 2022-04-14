@@ -76,7 +76,6 @@
 
     .card-text-full {
         display: flex;
-        position: relative;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -87,6 +86,49 @@
         -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
         -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
         box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
+    }
+
+    .checkbox {
+        width: 0;
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-text-full:hover .checkbox {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translate(12%);
+        width: 14%;
+        animation: checkbox .25s ease-in-out;
+    }
+
+    @keyframes checkbox {
+        0% {
+            transform: translate(0%);
+            width: 0%;
+        }
+
+        33% {
+            transform: translate(4%);
+            width: 4%;
+        }
+
+        66% {
+            transform: translate(8%);
+            width: 8%;
+        }
+
+        100% {
+            transform: translate(12%);
+            width: 12%;
+        }
+    }
+
+    .bi-check-circle-fill {
+        color: white;
+        overflow: hidden;
     }
 
     .card-text {
@@ -110,8 +152,6 @@
         font-weight: 700;
         font-size: 14px;
     }
-
-    
 
     .bi-heart-fill {
         order: 1;
