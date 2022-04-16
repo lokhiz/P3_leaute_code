@@ -263,6 +263,9 @@
         color: white;
         font-size: 16px;
         gap: 10px;
+        cursor: pointer;
+        width: min-content;
+        white-space: nowrap;
     }
 
     a {
