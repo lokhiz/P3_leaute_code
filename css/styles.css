@@ -331,8 +331,9 @@
         margin: 8px;
         border: 8px solid #fff;
         border-radius: 50%;
-        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        animation: lds-ring 1.6s cubic-bezier(0.5, 0, 0.5, 1);
         border-color: #fff transparent transparent transparent;
+        animation-fill-mode: forwards;
       }
 
       .lds-ring div:nth-child(1) {
@@ -349,12 +350,14 @@
 
       @keyframes lds-ring {
         0% {
+            opacity: 1;
           transform: rotate(0deg);
         }
         100% {
+            opacity: 0;
           transform: rotate(360deg);
         }
-      }
+      } 
       
     .loader-wrapper {
         width: 100%;
@@ -366,6 +369,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation-duration: 1.6s;
+        animation-fill-mode: forwards;
+        animation-name: loader-wrapper;
+    }
+
+    @keyframes loader-wrapper {
+        0% {
+            background: #9356DC;
+        }
+
+        100% {
+            background: none;
+        }
     }
 
     @media screen and (min-width: 450px) and (max-width: 1336px) {
