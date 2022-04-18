@@ -380,6 +380,7 @@
         }
 
         100% {
+            visibility: hidden;
             background: none;
         }
     }

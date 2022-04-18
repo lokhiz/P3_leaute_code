@@ -49,6 +49,22 @@
         border-top-right-radius: 45px 40px;
     }
 
+    .all-articles {
+        animation: all-articles 1s forwards;
+    }
+
+    @keyframes all-articles {
+        0% {
+            opacity: 0;
+            transform: translateY(-10%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .single-title {
         font-family: 'Shrikhand';
         font-size: 30px;
@@ -67,6 +83,7 @@
         display: flex;
         flex-direction: column;
         padding: 0 10px;
+        text-overflow: ellipsis;
     }
 
     .title-article {
@@ -94,14 +111,15 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 5px 0;
-        width: 100%;    
+        width: 100%;
+        text-overflow: ellipsis;
     }
 
     .card-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10px;
+        padding-left: 10px;
         gap: 5px;
     }
 
@@ -185,13 +203,17 @@
         text-overflow: ellipsis;
     }
 
+    h3 {
+        text-overflow: ellipsis;
+    }
+
     .price {
         color: #2C2C2C;
         font-weight: 700;
         font-size: 14px;
         display: flex;
         align-items: flex-end;
-        padding: 5px 10px;
+        padding: 5px 8px;
     }
 
     .bi-heart-fill {
@@ -295,7 +317,7 @@
         cursor: pointer;
     }
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 1200px) {
         .all-articles {
             display: flex;
             width: 100%;

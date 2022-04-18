@@ -47,6 +47,23 @@
         bottom: 50px;
         border-top-left-radius: 45px 40px;
         border-top-right-radius: 45px 40px;
+        animation: main .4s forwards;
+    }
+
+    .all-articles {
+        animation: all-articles 1s forwards;
+    }
+
+    @keyframes all-articles {
+        0% {
+            opacity: 0;
+            transform: translateY(-10%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .single-title {
@@ -67,6 +84,7 @@
         display: flex;
         flex-direction: column;
         padding: 0 10px;
+        text-overflow: ellipsis;
     }
 
     .title-article {
@@ -86,23 +104,27 @@
         -webkit-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
         -moz-box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
         box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.30);
-
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .card-text-full {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
         margin: 5px 0;
-        width: 100%;    
+        width: 100%;
     }
 
     .card-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10px;
+        padding-left: 10px;
         gap: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
     .checkbox {
@@ -111,7 +133,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 60px;
+        height: 100%;
     }
 
     .all-elements:hover .checkbox {
@@ -183,6 +205,14 @@
     h5 {
         font-weight: 100;
         text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    h3 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .price {
@@ -191,7 +221,7 @@
         font-size: 14px;
         display: flex;
         align-items: flex-end;
-        padding: 5px 10px;
+        padding: 5px 8px;
     }
 
     .bi-heart-fill {
@@ -295,7 +325,7 @@
         cursor: pointer;
     }
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 1200px) {
         .all-articles {
             display: flex;
             width: 100%;
