@@ -189,30 +189,32 @@
         justify-content: space-between;
     }
 
+    .heart {
+        display: grid;
+        margin-right: 20px;
+    }
+
+    .bi-heart, .bi-heart-fill {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
     .bi-heart-fill {
-        order: 1;
-        padding: 0 20px;
-        fill: transparent;
-        stroke: 10;
-        stroke: black;
-        stroke-dasharray: 0;
-        stroke-dashoffset: 0;
+        color: transparent;
+        background-image: linear-gradient(linear, right top, left bottom, #9356DC,#FF79DA);
+        background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        opacity: 0;
+        -webkit-transition: 700ms;
+        transition: 700ms;
     }
 
-    .bi-heart-fill:hover {
-        animation: animate-heart .25s linear forwards;
+    .heart:hover .bi-heart {
+        opacity: 0;
     }
 
-    @keyframes animate-heart {
-        0% {
-            stroke: #9356DC;
-            stroke-dashoffset: 49;
-        }
-        100% {
-            stroke: #9356DC;
-            stroke-dashoffset: 49;
-            fill: #9356DC;
-        }
+    .heart:hover .bi-heart-fill {
+        opacity: 1;
     }
 
     .bot-card {
@@ -331,7 +333,7 @@
         margin: 8px;
         border: 8px solid #fff;
         border-radius: 50%;
-        animation: lds-ring 1.6s cubic-bezier(0.5, 0, 0.5, 1);
+        animation: lds-ring 3s cubic-bezier(0.5, 0, 0.5, 1);
         border-color: #fff transparent transparent transparent;
         animation-fill-mode: forwards;
       }
@@ -369,7 +371,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation-duration: 1.6s;
+        animation-duration: 3s;
         animation-fill-mode: forwards;
         animation-name: loader-wrapper;
     }
